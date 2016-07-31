@@ -1,0 +1,418 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-Feb-2015, 18:57:48
+    Author     : ANM
+*/
+body {
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    font-size:20px;
+    width:90%;
+    height: auto;
+    margin:0 auto;
+    padding:0px;
+    background-image: url(..//Images/stamps.jpg);
+    text-align: center;
+}
+
+.container_div
+{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.h_div
+{
+    margin: 10px;
+    width: auto;
+}
+
+img, #logo
+{
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+    float: left;
+}
+
+h1
+{
+    font-family: 'Pacifico';
+    font-weight: normal;
+    font-size:26px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #19A3D1;
+    float: left;
+}
+
+h2
+{
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    color: #19A3D1;
+    margin: 5px;
+}
+.nav_bar_container
+{
+    padding-top: 15px;
+}
+
+/*Nav Styling*/
+.nav_class
+{
+    background-color: #474752;
+    border: 5px solid #19A3D1;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    color: #888;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+nav ul 
+{
+    margin: 0 auto;
+}
+ 
+nav ul li 
+{
+    display: inline-block;
+    list-style-type: none;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; 
+}
+nav > ul > li > a
+{
+    font-family: 'Droid Sans', sans-serif;
+    color: #19A3D1;
+    display: block;
+    line-height: 20px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+nav > ul > li:hover 
+{
+    background-color: rgb(40, 44, 47);
+}
+
+.user_name
+{
+    text-align: right;
+    color: #FFFFFF;
+}
+
+
+.main_div
+{
+    background-color: #474752;
+    height: 90%;
+    width: 99%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align:center;
+    float: left;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+    border: 5px solid #19A3D1;
+}
+
+ul.steps
+{
+    text-align: left;
+/*    margin: auto;
+    padding: 0px;
+    list-style: none;
+    */
+}
+ul.steps li
+{
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 26px;
+    color: #19A3D1;
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+}
+
+ul.steps li.current
+{
+    font-family: 'Droid Sans', sans-serif;
+    color: #fff;
+}
+
+.step_content
+{
+    display: none;
+    padding: 15px;
+}
+
+.step_content.current
+{
+    display: inherit;
+}
+
+.plan_trip_div
+{
+/*    width: 45%;
+    height: 500px;
+    float: left;
+    background-color: #474752;
+    text-align: center;
+    padding: 20px;
+    display: block;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+    border: 5px solid #19A3D1;
+    cursor: pointer;*/
+}
+
+#trip_info_div
+{
+    width: 100%;
+    margin-top: 30px
+}
+
+select
+{
+    width: 30%;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-bottom: auto;
+    font-size: 24px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: normal;
+    cursor: pointer;
+}
+  
+label
+{
+    font-family: 'Droid Sans';
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 0px;
+    color: #19A3D1;
+}
+
+.imp_label
+{
+    font-size: 24px;
+}
+
+.error_msg
+{
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #CC0000;
+}
+
+/*Input - TextBoxes - Styling*/
+inputs:-webkit-input-placeholder {
+    color: #b5b5b5;
+}
+
+inputs-moz-placeholder {
+    color: #b5b5b5;
+}
+
+.inputs, select, button
+{
+    background: #f5f5f5;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 20px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    padding: 5px 5px;
+    width: 20%;
+    height: 35px;
+    margin: 15px;
+}
+
+.inputs:focus {
+    background: #fff;
+    box-shadow: 0 0 0 3px #19A3D1, inset 0 2px 3px rgba( 0, 0, 0, 0.2 ), 0px 5px 5px rgba( 0, 0, 0, 0.15 );
+    outline: 1px;
+}
+
+.sml_input
+{
+    background: #f5f5f5;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 20px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    padding: 5px 5px;
+    width: 5%;
+    height: 35px;
+    margin: 15px;
+    text-align: center;
+}
+
+.sml_input:focus {
+    background: #fff;
+    box-shadow: 0 0 0 3px #19A3D1, inset 0 2px 3px rgba( 0, 0, 0, 0.2 ), 0px 5px 5px rgba( 0, 0, 0, 0.15 );
+    outline: 1px;
+}
+
+/*Button Styling*/
+.button_style
+{
+    background-color: #19A3D1;
+    font-size: 20px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    color: #474752;
+    width: 100px;
+    height: 40px;
+    margin: 20px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+    display: inline-block;
+}
+
+.button_style:hover
+{
+    width: 105px;
+    height: 45px;
+}
+
+/*Link Styling*/
+a
+{
+    font-size: 20px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: normal;
+    cursor: pointer;   
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+a:hover
+{
+    font-size: 25px; 
+}
+
+.map_canvas 
+{  
+    text-align: right;
+    height: 350px;
+    width: 95%;
+    margin: auto;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+    border: 5px solid #19A3D1;
+}
+
+/*Username styling*/
+#username
+{
+    font-weight: bolder;
+}
+.tbl_div
+{ 
+    width: 95%;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+    border: 5px solid #19A3D1;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.flights_tbl
+{
+    width: 95%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'Droid Sans', sans-serif;
+    color: #19A3D1;
+    font-weight: normal;
+    text-align: left;
+}
+
+.flights_tbl:hover
+{
+    color: #474752;
+}
+
+.header_class
+{
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Droid Sans', sans-serif;
+    color: #19A3D1;
+}
+
+input[type=checkbox]
+{
+    /*Chrome*/
+    -webkit-transform: scale(2);
+    /*FF*/  
+    -moz-transform: scale(2); 
+    /*IE*/
+    -ms-transform: scale(2);
+    /*Opera*/
+    -o-transform: scale(2);
+    padding: 0px;
+}
+
+.flight_info
+{
+
+    font-size: 22px;
+    font-family: 'Droid Sans', sans-serif;
+    color: #19A3D1;
+    line-height:80px;
+}
+
+.hidden_row_btn
+{
+    font-size: 20px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: normal;
+    cursor: pointer;
+    color: #19A3D1;
+    background-color: white;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+    border: 1px solid #19A3D1;
+    display: none;
+}

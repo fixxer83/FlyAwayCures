@@ -1,0 +1,45 @@
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SnoopServlet extends HttpServlet {
+	public void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		String userAgent =  req.getHeader("user-agent");
+		String clientBrowser =  "Not known!";	
+		if( userAgent != null)
+			clientBrowser = userAgent;
+		req.setAttribute("client.browser",clientBrowser );
+		req.getRequestDispatcher("/showBrowser.jsp").forward(req,resp);
+	}
+}
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <script type="text/javascript" src="../js/validateForm.js"></script>
+     <title>FlyAwayCures</title>
+</head>
+
+<div id="sign_up_div" class="app">
+	<h1>FlyAwayCures</h1>
+           
+    <div id="registerDiv">
+        <form id="sign_up_form" method="post" onsubmit="return(validateSignUp(this));" action="../jsp/forms/process.jsp">
+            <input type="text" id="full_name_txt" class="inputs" placeholder="full name"/></br>
+            <input type="text" id="email_txt" class="inputs" placeholder="email"/></br>
+            <input type="password" id="pwd_txt" class="inputs" placeholder="password"/></br>
+            <input type="password" id="conf_pwd_txt" class="inputs" placeholder="confirm password"/></br>
+            <input type="submit" id="submit_btn" class="button_style" value="Submit"/>
+        </form>
+    </div>
+
+        </div>
+</html>

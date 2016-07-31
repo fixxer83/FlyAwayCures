@@ -1,0 +1,33 @@
+package data;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class signUpDataClass extends connectorClass {
+	
+	public static void addNewUser() {
+		Connection conn = connectToDatabase();
+		
+		// Statement
+		Statement stmt = null;
+		try {
+			stmt = conn.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		// Query
+		String query1 = "INSERT INTO user_email (user_email_id, user_email_address) VALUES(?,?,?);";
+		
+		String query2 = "INSERT INTO user_details (user_details_id, full_name, password, user_email_id) VALUES(?,?,?,?);";
+		
+		try {
+			stmt.executeUpdate(query1);
+			stmt.executeUpdate(query2);			
+		}catch(SQLException e) {
+			e.fillInStackTrace();
+		}
+	}
+}

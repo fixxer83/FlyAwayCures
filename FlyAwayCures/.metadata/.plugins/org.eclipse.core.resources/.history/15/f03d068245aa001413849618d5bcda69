@@ -1,0 +1,49 @@
+package data;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class connectorClass {
+	
+	public static Connection connectToDatabase() {
+		
+		// Connection Params
+		
+		String url = "jdbc:mysql://localhost:3306/"; 
+		String dbName = "fly_away_cures";
+		String driver = "com.mysql.jdbc.Driver"; 
+		String userName = "root"; 
+		String password = "";
+		
+		try { 
+			
+			Class.forName(driver).newInstance(); 
+			Connection conn = DriverManager.getConnection(url+dbName,userName,password);
+			
+		// Returning the connection	
+			return conn;
+		}catch (Exception e) { 
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+	/**
+	 * This function will be used to 
+	 * close the passed connection
+	 * 
+	 * @param conn
+	 */
+	public static void closeConnection(Connection conn) {
+		
+		try {
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+	}
+
+}

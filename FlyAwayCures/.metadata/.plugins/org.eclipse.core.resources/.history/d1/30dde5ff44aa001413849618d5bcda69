@@ -1,0 +1,18 @@
+package data;
+
+public class signUpDataClass extends connectorClass {
+	
+	public static void addNewUser() {
+		connectToDatabase();
+		
+		//Query
+		String query1 = "INSERT INTO user_email (user_email_id, user_email_address) VALUES(?,?,?);";
+		
+		String query2 = "INSERT INTO user_details (user_details_id, full_name, password, user_email_id) VALUES(?,?,?,?);";
+		
+		
+		
+		
+	}
+
+}

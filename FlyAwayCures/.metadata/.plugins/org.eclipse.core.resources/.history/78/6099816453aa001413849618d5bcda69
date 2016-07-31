@@ -1,0 +1,39 @@
+package validation;
+
+public class validateSignUpClass {
+	
+	/* Function to call all validation functions 
+	  relating to the sign-up page
+	*/
+	public static boolean validateSignUp(String [] fieldValues)
+	{
+	  return (validateBlanks(fieldValues));
+	}
+
+	// Function to validate all fields against blank values
+	public static boolean validateBlanks(String fieldValues [])
+	{
+	  String fullName = fieldValues[0];
+	  String email = getEmailElement();
+	  String password = getPasswordElement();
+	  String confPassword = getConfirmPasswordElement();
+
+	  String fields = [fullName, email, password, confPassword];
+
+	  int i, fieldCount = fields.length;
+
+	  for(i = 0; i < fieldCount; i++)
+	  {
+	    if(fields[i].value == "")
+	    {
+	      alert(" All fields are required and cannot be left blank!");
+
+	      return false;
+	    }
+	  }
+	  return true;
+	}
+	
+	
+
+}

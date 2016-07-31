@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <script type="text/javascript" src="../js/validateForm.js"></script>
+        <title>FlyAwayCures</title>
+    </head>
+    <body>
+        <div id="sign_up_div" class="app">
+            <h1>FlyAwayCures</h1>
+           
+        <div id="registerDiv">
+            <form id="sign_up_form" method="post" onsubmit="return(validateSignUp(this));">
+                <input type="text" id="full_name_txt" class="inputs" placeholder="full name"/></br>
+                <input type="text" id="email_txt" class="inputs" placeholder="email"/></br>
+                <input type="password" id="pwd_txt" class="inputs" placeholder="password"/></br>
+                <input type="password" id="conf_pwd_txt" class="inputs" placeholder="confirm password"/></br>
+                <input type="submit" id="submit_btn" class="button_style" value="Submit"/>
+            </form>
+        </div>
+
+        </div>
+    </body>
+</html>
